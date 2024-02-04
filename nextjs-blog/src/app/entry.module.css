@@ -1,10 +1,11 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: white;
 }
 
 .description {
@@ -209,7 +210,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: light) {
   .vercelLogo {
     filter: invert(1);
   }
@@ -217,7 +218,7 @@
   .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
-}
+} */
 
 @keyframes rotate {
   from {
@@ -226,4 +227,36 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.header{
+  color: black;
+  font-size: 50px;
+  font-style: bold;
+  font-family:  Arial;
+}
+
+.subheader{
+  color: black;
+  font-size: 30px;
+  font-style: bold;
+  font-family:  Arial;
+}
+
+.topspacing{
+  margin-top: 8px;
+}
+
+.bottomspacing{
+  margin-bottom: 16px;
+}
+
+
+.sidespacing{
+  margin-left: 8px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
 }
