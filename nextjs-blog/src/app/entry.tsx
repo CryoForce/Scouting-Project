@@ -12,7 +12,7 @@ import "firebase/firestore";
 import { getFirestore, doc, getDoc, collection, query, where, Query, getDocs, getDocsFromServer, setDoc } from "firebase/firestore";
 
 
-export default function Entry() {
+export default function Entry({updateDone}: any) {
 
   const [teamsInfo, setTeamInfo1] = useState([] as any);
 
@@ -72,7 +72,9 @@ const db = getFirestore(app);
   }
 
   function Submit(){
-    updateDB()
+     updateDB()
+     updateDone()
+    
   }
 
    async function updateDB(){
