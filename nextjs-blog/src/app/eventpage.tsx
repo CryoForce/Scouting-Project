@@ -12,7 +12,7 @@ import "firebase/firestore";
 import { getFirestore, doc, getDoc, collection, query, where, Query, getDocs, getDocsFromServer, setDoc } from "firebase/firestore";
 
 
-export default function eventpage() {
+export default function EventPage() {
 
   const [teamsInfo, setTeamInfo1] = useState([] as any);
 
