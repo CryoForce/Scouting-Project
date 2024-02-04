@@ -12,7 +12,7 @@ import "firebase/firestore";
 import { getFirestore, doc, getDoc, collection, query, where, Query, getDocs, getDocsFromServer } from "firebase/firestore";
 
 
-export default function admin() {
+export default function Admin() {
 
   const [teamsInfo, setTeamInfo1] = useState([] as any);
 
@@ -40,7 +40,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-  
 
 
 
