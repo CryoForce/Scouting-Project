@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { Button } from '@mui/material'
@@ -9,16 +10,18 @@ import EventPage from './eventpage';
 export default function Home() {
 
   const [creationDone, setCreationDone] = useState(false);
+  const [eventName, setEventName] = useState("");
 
-  function updateCreation(value:boolean){
+  function updateCreation(value:boolean, eventName:any){
     setCreationDone(value);
+    setEventName(eventName)
    }
 
   return (
     <div>
       {!creationDone?
       <Entry updateDone={updateCreation}></Entry>
-      :<EventPage></EventPage>
+      :<EventPage eventName = {eventName}></EventPage>
     }
     </div>
   )

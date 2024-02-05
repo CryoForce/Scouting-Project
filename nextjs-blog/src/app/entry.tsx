@@ -73,7 +73,7 @@ const db = getFirestore(app);
 
   function Submit(){
      updateDB()
-     updateDone()
+     updateDone(true, eventName)
     
   }
 

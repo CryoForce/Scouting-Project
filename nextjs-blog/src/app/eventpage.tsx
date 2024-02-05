@@ -12,13 +12,9 @@ import "firebase/firestore";
 import { getFirestore, doc, getDoc, collection, query, where, Query, getDocs, getDocsFromServer, setDoc } from "firebase/firestore";
 
 
-export default function EventPage() {
+export default function EventPage({eventName}: any) {
 
-  const [teamsInfo, setTeamInfo1] = useState([] as any);
-
-  const [teamAmount, setTeamAmount] = useState(0);
-
-  const [eventName, setEventName] = useState("");
+ 
 
   
   const firebaseConfig = {
@@ -49,7 +45,7 @@ const db = getFirestore(app);
 
   return (
     <main className={styles.main}>
-      <div className={`${styles.header} ${styles.bottomspacing}`}>Create an Event</div>
+      <div className={`${styles.header} ${styles.bottomspacing}`}>{eventName}</div>
 
       
       
