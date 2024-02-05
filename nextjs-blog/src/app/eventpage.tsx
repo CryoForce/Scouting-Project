@@ -12,7 +12,7 @@ import "firebase/firestore";
 import { getFirestore, doc, getDoc, collection, query, where, Query, getDocs, getDocsFromServer, setDoc } from "firebase/firestore";
 
 
-export default function EventPage({eventName}: any) {
+export default function EventPage({eventName, teamsInfo}: {eventName:any, teamsInfo:any}) {
 
  
 
@@ -46,6 +46,25 @@ const db = getFirestore(app);
   return (
     <main className={styles.main}>
       <div className={`${styles.header} ${styles.bottomspacing}`}>{eventName}</div>
+
+      <div className={`${styles.subheader} ${styles.bottomspacing}`}>Teams</div>
+      <div className={`${styles.subheader} ${styles.bottomspacing}`}>Matches</div>
+
+      <div className={`${styles.spacing} ${styles.teamdisplay}`}>
+      {teamsInfo && <>
+      {Array.from(teamsInfo).map((team:any, key:any) => ( <div className={`${styles.row} ${styles.topspacing}`}>
+                
+                <div>{team.number}</div>
+                <div>{team.name}</div>
+              
+                </div>
+                )
+            )}
+            </>}
+            </div>
+      
+
+            
 
       
       

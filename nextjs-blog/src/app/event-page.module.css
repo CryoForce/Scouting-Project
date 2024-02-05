@@ -243,6 +243,13 @@
   font-family:  Arial;
 }
 
+.teamdisplay{
+  color: black;
+  font-size: 25px;
+  font-style: bold;
+  font-family:  Arial;
+}
+
 .topspacing{
   margin-top: 8px;
 }
