@@ -126,7 +126,7 @@ const db = getFirestore(app);
           <>
             <div className={`${styles.subheader} ${styles.topspacing} ${styles.bottomspacing}`}>Ready To Submit?</div>
       
-            <Button variant="contained" onClick={Submit}><a href='admin'/>Submit</Button>
+            <Button variant="contained" onClick={Submit}>Submit</Button>
             
 
 

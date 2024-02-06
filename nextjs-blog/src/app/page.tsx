@@ -6,6 +6,7 @@ import Entry from './entry'
 import { useState } from 'react';
 import Admin from './admin';
 import EventPage from './eventpage';
+import MatchCreation from './eventpage'
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
       {!creationDone?
       <Entry updateDone={updateCreation}></Entry>
       :<EventPage eventName = {eventName} teamsInfo = {teamsInfo}></EventPage>
+      :<MatchCreation eventName = {eventName} teamsInfo = {teamsInfo}></MatchCreation>
     }
     </div>
   )

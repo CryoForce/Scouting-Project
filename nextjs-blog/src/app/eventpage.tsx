@@ -35,7 +35,11 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
-
+function Submit(){
+ 
+  updateDone(true, eventName, teamsInfo)
+ 
+}
   
 
 
@@ -62,6 +66,7 @@ const db = getFirestore(app);
             )}
             </>}
             </div>
+            <Button variant="contained" onClick={Submit}><a href='admin'/>Create Matches</Button>
       
 
             
