@@ -153,8 +153,7 @@ const handleChange = (event: SelectChangeEvent) => {
                 </Grid>
 
                 <Grid className={styles.sidespacing}>
-                    <TextField label="Team Name" variant="outlined" value={team.name}
-                               onChange={(e)=> collectTeamName(e,key)}></TextField>
+               
 
                 </Grid>
                 </div>
